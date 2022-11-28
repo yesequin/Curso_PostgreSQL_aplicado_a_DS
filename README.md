@@ -1,6 +1,6 @@
 # POSTGRESQL APLICADO A CIENCIA DE DATOS
 
-[Version en notion](https://www.notion.so/POSTGRESQL-APLICADO-A-CIENCIA-DE-DATOS-92d84df3c8a7410ab1a8c7ae389f4f12) ![notion](images_POSTGRESQL/notion.PNG)
+[Version en notion](https://www.notion.so/POSTGRESQL-APLICADO-A-CIENCIA-DE-DATOS-92d84df3c8a7410ab1a8c7ae389f4f12) ![notion](images_PostgreSQL_aplicado_a_ciencia_de_datos/notion.PNG)
 
 - INTRODUCCIÓN
     
@@ -92,7 +92,7 @@
     - **Common table expressions.** Expresiones que utiliza postgresql para el tratamiento de datos como tablas virtuales, más eficiente en tiempo de ejecución
     - **Window functions** trata de encontrar relaciones entre un registro y el resto de registros
     
-    ![Untitled](images_POSTGRESQL/Untitled.png)
+    ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled.png)
     
 - STORED PROCEDURES
     
@@ -159,7 +159,7 @@
     
     Tipos de disparadores:
     
-    ![Untitled](images_POSTGRESQL/Untitled%201.png)
+    ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%201.png)
     
 - DECLARANDO VARIABLES EN LA FUNCIÓN
     
@@ -191,7 +191,7 @@
     
     Ejemplo:
     
-    ![Untitled](images_POSTGRESQL/Untitled%202.png)
+    ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%202.png)
     
 - INTEGRACIÓN CON OTROS LENGUAJES
     
@@ -215,11 +215,11 @@
     
     Ejemplo de lenguaje PL/pgSQL:
     
-    ![Untitled](images_POSTGRESQL/Untitled%203.png)
+    ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%203.png)
     
     Ejemplo de lenguaje PL/Python:
     
-    ![Untitled](images_POSTGRESQL/Untitled%204.png)
+    ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%204.png)
     
 - TIPOS DE DATOS PERSONALIZADOS
     
@@ -232,13 +232,13 @@
         
         CREATE TYPE *nombre_tipo_de_dato* AS *tipo_de_dato (valor1,…,valorn) ;*
         
-        ![Untitled](images_POSTGRESQL/Untitled%205.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%205.png)
         
     2. Lo llamamos o usamos al crear una tabla:
         
         CREATE TABLE *nombre_tabla*(*valor1 nombre_tipo_de_dato,…,valorn nombre_tipo_de_dato*);
         
-        ![Untitled](images_POSTGRESQL/Untitled%206.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%206.png)
         
 - AGREGACIÓN DE DATOS
     - MIN
@@ -247,7 +247,7 @@
     - COUNT: COUNT(a través de qué índice queremos que cuente)
         - este código cuenta la cantidad de películas que hay en cada categoría.
         
-        ![Untitled](images_POSTGRESQL/Untitled%207.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%207.png)
         
         Hay que tener en cuenta que count(*) cuenta todas la filas y count(campo) no toma encuenta los campos con valores nulos al realizar la cuenta.
         
@@ -286,23 +286,23 @@
         
         }’ )
         
-        ![Untitled](images_POSTGRESQL/Untitled%208.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%208.png)
         
     2. Hasta este punto se ven como si fueran cadenas normales, pero la diferencia viene a la hora de cómo data science extraer todos los datos. Entonces extraigamos los datos:
         
         SELECT *nombre_columna_con_datos_json* → ‘*nombre_de_llave*’ AS *alias* FROM *nombre_de_tabla;*
         
-        ![Untitled](images_POSTGRESQL/Untitled%209.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%209.png)
         
         Con la flecha le estamos diciendo que lo que vamos a extraer es del json info la llave cliente y lo que traiga esa llave es lo que nos va a arrojar la variable client.
         
     3. Si queremos extraer los datos en formato string o cadena solo tenemos que poner flecha doble en vez de flecha sencilla en el paso 2. con esto nos regresa un texto, en nuestro ejemplo.
         
-        ![Untitled](images_POSTGRESQL/Untitled%2010.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2010.png)
         
     - Ejemplo con WHERE:
         
-        ![Untitled](images_POSTGRESQL/Untitled%2011.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2011.png)
         
 - AGREGANDO OBJETOS
     
@@ -316,7 +316,7 @@
     2. Tenemos que decirle primero que el dato no es un string ni un JSON. Tenemos que transformarlo primero a un objeto JSON en string y luego el string en un integer (entero). Para esto usamos la función llamada CAST. 
         1. CAST transforma un tipo de dato en otro
         
-        ![Untitled](images_POSTGRESQL/Untitled%2012.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2012.png)
         
         En este ejemplo queremos en formato JSON el objeto items, y derivado del objeto items lo que queremos es la cantidad transformada en un string o texto. Después tenemos que decir qué tipo de datos queremos (INTEGER para poder sumarizaciones como MIN).
         
@@ -340,7 +340,7 @@
     5. (VALUES(1)  UNION ALL SELECT n+1 FROM nombre de la tabla recursiva …) → Vamos a decir que tiene un valor de 1 que va a estar en unión con una sentencia SELECT para que podamos sacarlo de una tabla real.
     6. Al final de esta construcción tenemos que llamarla con un SELECT normal
     
-    ![Untitled](images_POSTGRESQL/Untitled%2013.png)
+    ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2013.png)
     
 - WINDOW FUNCTIONS
     
@@ -350,7 +350,7 @@
     
     Lista de window function:
     
-    ![Untitled](images_POSTGRESQL/Untitled%2014.png)
+    ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2014.png)
     
     Tipos de window function:
     
@@ -366,7 +366,7 @@
     
     Sintaxis:
     
-    ![Untitled](images_POSTGRESQL/Untitled%2015.png)
+    ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2015.png)
     
 - PARTICIONES
     
@@ -392,32 +392,32 @@
 - PROYECTO - EJEMPLOS
     - Top 10. Usamos la window function ROW_NUMBER() para asignarle el lugar a cada película con mayor cantidad de rentas
         
-        ![Untitled](images_POSTGRESQL/Untitled%2016.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2016.png)
         
     - Creamos una trigger function dandole click derecho → create donde dice trigger function. Ponemos el nombre, definimos el idioma en definition y en la parte de CODE escribimos BEGIN, END y en el medio la acción que queremos que haga.
         - Los datos los va a sacar con un SELECT NEW, que es el nuevo registro que se va a insertar en la tabla. Esto lo que va a hacer es que cada vez que insertemos algo en la tabla movies se actualice en la nueva tabla que ya tiene el tipo de cambio específico.
         - El CURRENT_TIMESTAMP toma el tiempo del servidor actual y lo pone como fecha y hora de la última actualización.
         
-        ![Untitled](images_POSTGRESQL/Untitled%2017.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2017.png)
         
         - Ahora que ya tenemos la función que nos regresa un trigger tenemos que crear el trigger en si. Este es un trigger que va a actualizar los tipos de cambio on update de la tabla. AFTER INSERT OR UPDATE significa que cada vez que insertemos o actualicemos un registro en la tabla movies va a hacer el cambio y guardar un nuevo valor ahora en la tabla destinada (en este caso es en la tabla )
         
-        ![Untitled](images_POSTGRESQL/Untitled%2018.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2018.png)
         
     - Usamos el mismo código para sacar el top 10 pero quitandole el limit y reemplazando ROW_NUMBER por PERCENT_RANK para ver el puesto en porcentajes y el DENSE_RANK nos trae un rango más directo, sin porcentaje
         
-        ![Untitled](images_POSTGRESQL/Untitled%2019.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2019.png)
         
-        ![Untitled](images_POSTGRESQL/Untitled%2020.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2020.png)
         
     - Para ver el número de rentas por ciudad:
         
-        ![Untitled](images_POSTGRESQL/Untitled%2021.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2021.png)
         
     - Cantidad de rentas de cada película por mes y año de renta
         
-        ![Untitled](images_POSTGRESQL/Untitled%2022.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2022.png)
         
     - Cantidad de rentas hechas separados por mes y año. Podemos agregarle un ORDER BY the_year y the_month para que se vea organizado.
         
-        ![Untitled](images_POSTGRESQL/Untitled%2023.png)
+        ![Untitled](images_PostgreSQL_aplicado_a_ciencia_de_datos/Untitled%2023.png)
